@@ -46,16 +46,17 @@ def str_elapsed(t):
     seconds = int(time.time()) - t
     if seconds <= 1:
         return "now"
-    if seconds < 60:
-        return "%s seconds ago" % (seconds)
-    if seconds < 60 * 60:
-        return "%d minutes ago" % (seconds / 60)
+        
+    elif seconds < 60:
+        return "%s seconds ago" % seconds
+        
+    elif seconds < 3600:
+        return "%d minute%s ago" % (seconds / 60, 's' if seconds % 60 else '')
 
-    if seconds < 3600 * 24:
-        return "%d hours ago" % (seconds / 3600)
+    elif seconds < 86400:
+        return "%d hour%s ago" % (seconds / 3600, 's' if seconds % 3600 else '')
 
-    else:
-        return "%d days ago" % (seconds / 3600 / 24)
+    return "%d day%s ago" % (seconds / 86400, 's' if seconds % 86400 else '')
 
 
 def redirect(location='/'):
