@@ -51,24 +51,6 @@ def application(environ, start_response):
     return response(environ, start_response)
 
 
-def helloworld(request):
-    auth_user(request.cookies.get('auth'))
-    auth = request.cookies.get('auth')
-    logout = request.GET.get('logout')
-    if g.user:
-        if logout:
-            update_auth_token(g.user)
-            return webob.Response('logout')
-        else:
-            body = """<html>
-            <a href='/logout?apisecret=%s'>logout</a><br/>
-
-            %s</html>""" %  (g.user['apisecret'], str(g.user))
-            return webob.Response(body)
-    else:
-        return webob.Response('hello world anonymous')
-
-
 def login(request):
     auth_user(request.cookies.get('auth'))
     if g.user:
