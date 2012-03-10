@@ -28,7 +28,7 @@
 		  </a>
 		  <ul class="nav">
 			<li><a href="/top">top</a></li>
-			<li><a href="/">new</a></li>
+			<li><a href="/latest">new</a></li>
 			<li class="active"><a href="#">comments</a></li>
 			<li><a href="/submit">submit</a></li>
 		  </ul>
