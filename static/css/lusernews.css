@@ -1,0 +1,190 @@
+body {
+	background-color: #fbfbf9;
+}
+
+
+.news {
+	margin-bottom: 12px;
+}
+
+.story {
+	margin-bottom: 10px;
+}
+
+.newsid {
+	font-size: 11px;
+	float: left;
+	text-align: right;
+	color: #828282;
+	padding-right: 4px;
+	width: 2.5ex;
+}
+
+.uparrow  {
+	font-size: 12px;
+}
+
+.uparrow.up {
+	color:#eedddd;
+}
+
+
+.downarrow {
+	display: none;
+	font-size: 10px;
+}
+
+.newstitle {
+	color: #222222;
+	font-size: 14px;
+}
+
+.fromsite {
+	color: 	#828282;
+}
+
+.subtext {
+	font-size: 12px;
+	color: #828282;
+	margin-left: 35px;
+}
+
+.subtext1 {
+	color: #828282;
+	font-size: 12px;
+}
+
+.newspage {
+	margin-left: 15px;
+}
+
+.submitby {
+	color: #444444;
+}
+
+.input-title {
+	width: 400px;
+}
+
+.input-url {
+	width: 400px;
+}
+
+
+.textarea-comment {
+	width: 380px;
+}
+
+.newscomments {
+	color: #444444;
+
+}
+
+.footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+	border-top: 1px #ccc solid;
+    margin-bottom:30px;
+	margin-top:25px;
+	padding-top:10px;
+	text-align: center;
+}
+
+
+.deleted {
+	color: #ff0000;
+}
+
+#errormsg {
+	color: #ff0000;
+}
+
+.about {
+	font-size: 14px;
+	line-height: 35px;
+	margin-bottom: 30px;
+}
+
+.userinfo {
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.userinfo .username {
+	position:relative;
+    left:15px;
+    top:-15px;
+    display:inline;
+    font-size:28px;
+    color: #444;
+}
+
+.userinfo pre {
+	border: 0px;
+	background-color: transparent;
+    color: #666;
+    font-style: italic;
+    margin:20px;
+}
+
+.userinfo .info {
+	line-height: 25px;
+	font-size: 14px;
+}
+
+.userinfo .ulabel {
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+.more {
+	margin-left: 35px;
+}
+
+.newstext pre {
+	border: 0px;
+	background-color: transparent;
+    color: #666;
+	margin: 10px 0px 0px 20px;
+}
+
+#disqus_thread {
+	width: 650px !important;
+}
+
+#recentcomments {
+	width: 700px;
+}
+
+#dsq-content h3 {
+        font-size: 14px;
+        display: none;
+}
+
+#dsq-global-toolbar {
+	margin: 0;
+}
+
+#dsq-sort-by {
+        display: none;
+}
+
+#dsq-reply {
+       margin-bottom: 40px;
+}
+
+#dsq-subscribe{
+        display: none;
+}
+
+#dsq-footer {
+        margin: 0px;
+}
+
+
+.btn-github {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+

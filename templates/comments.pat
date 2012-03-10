@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>Latest comments - Luser News</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/lusernews.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="/js/app.js"></script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-29501488-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+	</script>
+  </head>
+  <body>
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a class="brand" href="/">
+			Luser News
+		  </a>
+		  <ul class="nav">
+			<li><a href="/top">top</a></li>
+			<li><a href="/">new</a></li>
+			<li class="active"><a href="#">comments</a></li>
+			<li><a href="/submit">submit</a></li>
+		  </ul>
+
+		  <ul class="nav pull-right">
+			{% if user %}
+			<li><a href="/user/{{user['username']}}">{{user['username']}} ({{user['karma']}})</a></li>
+			<li class="divider-vertical"></li>
+			<li><a href="/logout?apisecret={{user['apisecret']}}">logout</a></li>
+			{% else  %}
+			<li class="divider-vertical"></li>
+			<li class="active"><a href="/login">login</a></li>
+			{% endif %}
+
+		  </ul>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container">
+	  <div id="recentcomments" class="dsq-widget">
+		<script type="text/javascript" src="http://lusernews.disqus.com/recent_comments_widget.js?num_items=20&hide_avatars=0&avatar_size=32&excerpt_length=200">
+		</script>
+	  </div>
+
+
+	</div>
+
+	<div id="footer" class="footer">
+	  <a href="/about">about</a> | <a href="/rss">rss</a> | <a href="http://twitter.com/lusernews">twitter</a> | <a href="http://weibo.com/lusernews">weibo</a>
+	  <script>var apisecret = '{{user['apisecret']}}';</script>
+	</div>
+  </body>
+</html>
