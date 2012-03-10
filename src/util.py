@@ -51,12 +51,15 @@ def str_elapsed(t):
         return "%s seconds ago" % seconds
         
     elif seconds < 3600:
-        return "%d minute%s ago" % (seconds / 60, 's' if seconds % 60 else '')
+        minutes = seconds / 60
+        return "%d minute%s ago" % (minutes, 's' if minutes > 1 else '')
 
     elif seconds < 86400:
-        return "%d hour%s ago" % (seconds / 3600, 's' if seconds % 3600 else '')
+        hours = seconds / 3600
+        return "%d hour%s ago" % (hours, 's' if hours > 1 else '')
 
-    return "%d day%s ago" % (seconds / 86400, 's' if seconds % 86400 else '')
+    days = seconds / 86400
+    return "%d day%s ago" % (days, 's' if days > 1 else '')
 
 
 def redirect(location='/'):
