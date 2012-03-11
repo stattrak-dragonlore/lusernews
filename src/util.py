@@ -46,10 +46,10 @@ def str_elapsed(t):
     seconds = int(time.time()) - t
     if seconds <= 1:
         return "now"
-        
+
     elif seconds < 60:
         return "%s seconds ago" % seconds
-        
+
     elif seconds < 3600:
         minutes = seconds / 60
         return "%d minute%s ago" % (minutes, 's' if minutes > 1 else '')
@@ -77,6 +77,7 @@ def static_response(file):
 
 #template
 def render(template, **kwargs):
+    kwargs.update({'disqus_name': config.DisqusName})
     return webob.Response(g.jj.get_template(template).render(kwargs))
 
 def rfc822(when=None):

@@ -33,7 +33,7 @@ try:
                         datefmt='%Y-%m-%d %H:%M:%S')
     logger = logging.getLogger()
 
-    WSGIServer(application, logger).run(port=7777)
+    WSGIServer(application, logger).run(port=7778)
 except KeyboardInterrupt:
     pass
 

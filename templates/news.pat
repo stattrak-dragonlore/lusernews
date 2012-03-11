@@ -77,7 +77,7 @@
 	  <div id="disqus_thread" class="disqus"></div>
 	  <script type="text/javascript">
 		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		var disqus_shortname = 'lusernews'; // required: replace example with your forum shortname
+		var disqus_shortname = '{{disqus_name}}'; // required: replace example with your forum shortname
 		var disqus_identifier = '/news/{{news["id"]}}';
 
 		/* * * DON'T EDIT BELOW THIS LINE * * */
@@ -92,7 +92,7 @@
 	  <!-- comments count  -->
 	  <script type="text/javascript">
 		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		var disqus_shortname = 'lusernews'; // required: replace example with your forum shortname
+		var disqus_shortname = '{{disqus_name}}'; // required: replace example with your forum shortname
 
 		/* * * DON'T EDIT BELOW THIS LINE * * */
 		(function () {

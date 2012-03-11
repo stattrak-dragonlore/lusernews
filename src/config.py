@@ -30,6 +30,7 @@ KarmaIncrementComment = 1
 
 # Comments
 CommentMaxLength = 4096
+DisqusName = 'lusernews'   #replace it with your forum shortname
 
 # News and ranking
 NewsAgePadding = 100
@@ -45,7 +46,6 @@ SavedNewsPerPage = 30
 TopNewsAgeLimit = 60*72
 
 # path
-
 HomePath = "~/lusernews/"
 
 TemplatesPath = "templates"
@@ -56,3 +56,6 @@ LogFile = "logs/error.log"
 LogLevel = "DEBUG"
 
 PidFile = "logs/luser.pid"
+
+#
+InviteOnlySignUp = False

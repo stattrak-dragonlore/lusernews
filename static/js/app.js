@@ -12,10 +12,7 @@ function signup() {
 		$("#errormsg").html('password missing')
 		return false
 	}
-	if (data.invitecode.length == 0) {
-		$("#errormsg").html('invitecode missing')
-		return false
-	}
+
     $.ajax({
         type: "POST",
         url:  "/api/signup",

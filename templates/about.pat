@@ -53,7 +53,7 @@
 	  <div id="disqus_thread"></div>
 	  <script type="text/javascript">
 		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		var disqus_shortname = 'lusernews'; // required: replace example with your forum shortname
+		var disqus_shortname = '{{disqus_name}}'; // required: replace example with your forum shortname
 		var disqus_identifier = '/about';
 
 		/* * * DON'T EDIT BELOW THIS LINE * * */
