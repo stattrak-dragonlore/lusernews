@@ -218,8 +218,8 @@ def compute_news_rank(news):
         rank = score - (age ** config.RankAgingFactor)/20000
 
     else:
-        rank = (score*20000) / \
-            ((age + config.NewsAgePadding)**config.RankAgingFactor)
+        rank = ((score-0.9)*20000) / \
+            ((age+config.NewsAgePadding)**config.RankAgingFactor)
 
     if age > config.TopNewsAgeLimit:
         rank -= 6
