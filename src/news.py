@@ -239,7 +239,7 @@ def compute_news_rank(news):
 def update_news_rank_if_needed(r, n):
     real_rank = compute_news_rank(n)
     delta_rank = abs(real_rank - float(n["rank"]))
-    if delta_rank > 0.01:
+    if delta_rank > 0.001:
         r.hset("news:%s" % n["id"], "rank", real_rank)
         r.zadd("news.top", real_rank, n["id"])
         n["rank"] = str(real_rank)

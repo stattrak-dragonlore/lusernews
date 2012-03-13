@@ -188,3 +188,14 @@ body {
 	margin-bottom: 20px;
 }
 
+
+.luser {
+	display: block;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.luser a {
+	color: #666666;
+}

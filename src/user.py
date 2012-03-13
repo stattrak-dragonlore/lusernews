@@ -118,3 +118,17 @@ def increment_user_karma_by(user_id, increment):
     if g.user and int(user_id) == int(g.user['id']):
         g.user['karma'] = int(g.user['karma']) + increment
 
+
+def get_new_users(count):
+    r = g.redis
+    n = int(r.get('users.count'))
+    pl = r.pipeline()
+    for i in range(n, n-count, -1):
+        if i == 0:
+            break
+        key = "user:%s" % i
+        pl.hgetall(key)
+
+    users = pl.execute()
+
+    return users

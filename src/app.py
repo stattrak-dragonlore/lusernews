@@ -221,3 +221,8 @@ def saved(request, start=None):
                        start=start, next=next)
 
 
+def lusers(request):
+    auth_user(request.cookies.get('auth'))
+
+    users = get_new_users(10)
+    return util.render('lusers.pat', users=users, user=g.user)

@@ -29,6 +29,8 @@ url_mapping = [
     ('/news/(\d+)$', 'app.newspage'),
     ('/editnews/(\d+)$', 'app.editnews'),
     ('/user/(\w+)$', 'app.userpage'),
+    ('/luser/(\w+)$', 'app.userpage'),
 
+    ('/lusers$', 'app.lusers'),
     ]
 
