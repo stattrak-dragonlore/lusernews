@@ -1,4 +1,3 @@
-
 About
 =================
 
@@ -19,7 +18,7 @@ You need to install the following python packages:
 
 * jinja2
 * webob
-* redis-py
+* redis
 * httplib2 (0.6)  # for github sign in
 
 
