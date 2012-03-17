@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/lusernews.css"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="/js/app.js"></script>
+	{% include "ga.pat" %}
   </head>
   <body>
 	<div class="navbar">
@@ -57,9 +58,7 @@
 
 	</div>
 
-	<div id="footer" class="footer">
-	  <a href="/about">about</a> | <a href="/rss">rss</a> | <a href="http://twitter.com/lusernews">twitter</a> | <a href="http://weibo.com/lusernews">weibo</a>
-	  <script>var apisecret = '{{user['apisecret']}}';</script>
-	</div>
+	{% include "footer.pat" %}
+
   </body>
 </html>

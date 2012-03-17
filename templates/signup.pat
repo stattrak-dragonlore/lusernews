@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/lusernews.css"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="/js/app.js"></script>
+	{% include "ga.pat" %}
   </head>
   <body>
 	<div class="navbar">
@@ -39,7 +40,10 @@
 	  <form name="f">
 		<input type="text" id="username" class="input-small" placeholder="username"/> <br/>
 		<input type="password" id="password" class="input-small" placeholder="password"/> <br/>
+		{% if invite %}
 		<input type="text" id="invitecode" class="input-small" placeholder="invitation code"/> <br/>
+		{% endif %}
+
 		<button type="submit" class="btn btn-small">signup</button> <br/>
 	  </form>
 
@@ -54,8 +58,7 @@
 
 	</div>
 
-  <div id="footer" class="footer">
-	<a href="/about">about</a> | <a href="/rss">rss</a> | <a href="http://twitter.com/lusernews">twitter</a> | <a href="http://weibo.com/lusernews">weibo</a></footer>
-  </div>
+	{% include "footer.pat" %}
+
   </body>
 </html>

@@ -2,6 +2,7 @@ import json
 import webob
 import oauth2  #requires httplib2 0.6
 import util
+import config
 import globals as g
 from user import *
 
@@ -10,10 +11,10 @@ from user import *
 #
 
 oauth_settings = {
-    'client_id': 'ZZZ',
-    'client_secret': 'XXXX',
+    'client_id': config.github_client_id,
+    'client_secret': config.github_secret,
     'base_url': 'https://github.com/login/oauth/',
-    'redirect_url': 'http://lusernews.com/oauth/github/callback'
+    'redirect_url': config.github_callback_url,
 }
 
 def auth(request):

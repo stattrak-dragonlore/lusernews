@@ -78,6 +78,8 @@ def static_response(file):
 #template
 def render(template, **kwargs):
     kwargs.update({'disqus_name': config.DisqusName})
+    if config.GoogleAnalytics:
+        kwargs.update({'ga': config.GoogleAnalytics})
     return webob.Response(g.jj.get_template(template).render(kwargs))
 
 def rfc822(when=None):

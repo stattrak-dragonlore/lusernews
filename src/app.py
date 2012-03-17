@@ -56,7 +56,7 @@ def login(request):
     if g.user:
         return util.redirect('/')
     else:
-        return util.static_response('login.html')
+        return util.render('login.pat')
 
 
 def signup(request):
@@ -64,7 +64,7 @@ def signup(request):
     if g.user:
         return util.redirect('/')
 
-    return util.static_response('signup.html')
+    return util.render('signup.pat', invite=config.InviteOnlySignUp)
 
 
 def logout(request):
