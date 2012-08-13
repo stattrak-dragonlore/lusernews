@@ -21,6 +21,6 @@ You need to install the following python packages:
 * redis
 * httplib2 (0.6)  # for github sign in
 
-[InstallationGuideForNewbie](https://github.com/dengzhp/lusernews/wiki/InstallationGuideForNewbie)  (in Chinese)
+[InstallationGuideForNewbie](https://github.com/dengzhp/lusernews/wiki/InstallationGuideForNewbie)
 
 
