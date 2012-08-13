@@ -274,8 +274,11 @@ def update_profile(request):
                 }
             return util.json_response(result)
 
-        r.hset("user:" + g.user['id'], "password",
-               util.hash_password(password, g.user['salt']))
+        salt = g.user.get('salt', util.get_rand())
+        r.hmset("user:" + g.user['id'], {
+                "password": util.hash_password(password, salt),
+                "salt": salt
+                })
 
     r.hmset("user:" + g.user['id'], {
             "about": about.rstrip(),
@@ -312,4 +315,3 @@ def vote_news(request):
         return util.json_response({"status": "ok" })
     else:
         return util.json_response({"status": "error" })
-
